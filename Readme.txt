@@ -1,6 +1,3 @@
-Name:Priyanka Wakte
-cse 6331-Advance Database
-Assignment-04
 
 
 Link:
