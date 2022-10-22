@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Priyanka</title>
+    {% include '/index.html' %}
+</head>
+
+ <style>
+body {
+  background-color: coral;
+}
+</style>
+
+
+<form action="/SearchByWord" method="POST">
+   Word: <input type="text" placeholder="Enter Word" name="w" value="{{ w }}"> <br/><br/>
+
+    <input type="submit" value="Submit">
+</form>
+
+ <table class="table table-hover">
+      <thead>
+
+     <tr>
+              <th style="font-size: xx-large;color:  #6F2E71">File name:</th>
+             <th style="font-size: xx-large;color:  #3E712E" > Line:</th>
+             <th style="font-size: xx-large;color:  #2E3E71" > Line number :</th>
+             <th style="font-size: xx-large;color:  #712E5B" > word Position:</th>
+     </tr>
+
+      <tbody>
+      {% for a,b,c,d in all_list %}
+
+                <tr>
+
+                  <td style="color:#C12244">{{a}}</td>
+
+                    <td style="color:#352C2E">{{b}}</td>
+
+                    <td style="color#0AAE25">{{c}}</td>
+
+                    <td style="color#0AAE25">{{d}}</td>
+
+                </tr>
+       {% endfor %}
+      </tbody>
+
+
+
+
+  </table>
+
+</html>
